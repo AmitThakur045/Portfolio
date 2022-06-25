@@ -11,7 +11,7 @@ const Navbar = () => {
           MIT
         </h1>
       </div>
-      <div className="col-span-2 flex w-full space-x-6 text-gray-200 text-[0.8rem]">
+      <div className="col-span-2 flex w-full space-x-6 text-gray-200 text-[0.8rem] font-semibold">
         <div className="hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
           <a href="#home">HOME</a>
         </div>
