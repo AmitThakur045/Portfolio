@@ -1,6 +1,8 @@
 /* black #23282e */
 /* pink #f30841 */
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #23282e;
   background-image: repeating-linear-gradient(
@@ -11,5 +13,4 @@ body {
     transparent 6px
   );
   background-size: 4px 4px;
-  scroll-behavior: smooth;
 }
