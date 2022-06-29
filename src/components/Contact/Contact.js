@@ -72,7 +72,7 @@ const Contact = () => {
             Contact Me
           </h1>
         </div>
-        <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 justify-center space-x-4 mt-14">
+        <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 justify-center sm:space-x-4 mt-14">
           <div className="flex-[0.3] flex flex-col items-center space-y-5">
             {contactOptionsList.map((contactOption) => {
               const Icon = contactOption.logo;

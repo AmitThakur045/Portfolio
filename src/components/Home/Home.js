@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <>
       <div className="flex md:flex-row flex-col md:space-x-3" id="home">
-        <div className="md:flex-[0.6] flex flex-col pt-[5rem] w-full">
+        <div className="md:flex-[0.6] flex flex-col sm:pt-[5rem] w-full">
           <h1 className="text-[1.4rem] font-semibold pb-0">
             Hello, <span>I'm</span>
           </h1>
