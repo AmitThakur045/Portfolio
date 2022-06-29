@@ -12,8 +12,8 @@ import {
 const Home = () => {
   return (
     <>
-      <div className="flex" id="home">
-        <div className="flex-[0.6] flex flex-col pt-[5rem]">
+      <div className="flex md:flex-row flex-col md:space-x-3" id="home">
+        <div className="md:flex-[0.6] flex flex-col pt-[5rem] w-full">
           <h1 className="text-[1.4rem] font-semibold pb-0">
             Hello, <span>I'm</span>
           </h1>
@@ -23,7 +23,7 @@ const Home = () => {
           <p className="text-[1.4rem] font-semibold pb-0">
             FullStack Web Developer and Competitive Coder
           </p>
-          <p className="text-[1rem] pt-5 text-gray-400">
+          <p className="text-[1rem] pt-5 text-gray-400 w-full">
             I'm a MERN-Stack Web-Developer. Currently pursuing my Bachelor's in
             Technology in Computer Science and Engineering from Maharaja
             Surajmal Institute of Technology, New Delhi, India. Currently I'm
@@ -32,7 +32,7 @@ const Home = () => {
           </p>
           <div className="pt-12 space-y-3">
             <h1 className="font-semibold">FIND ME ON</h1>
-            <div className="flex space-x-5">
+            <div className="flex sm:space-x-5 space-x-3">
               <a
                 href="https://www.linkedin.com/in/amit-kumar-thakur-3024b51b7/"
                 alt="linkdin"
@@ -71,7 +71,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex-[0.4] flex flex-row pt-32 justify-end">
+        <div className="md:flex-[0.4] w-full flex flex-row pt-32 md:justify-end justify-center items-center">
           <div
             className="flex justify-end bg-[#101118] bg-opacity-80 rounded-lg h-[22rem] items-end shadow-lg"
             style={{

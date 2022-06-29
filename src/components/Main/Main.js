@@ -8,12 +8,12 @@ import About from "../About/About";
 
 const Main = () => {
   return (
-    <div className="px-24 py-10 w-full text-white">
-      <Navbar />
+    <div className="lg:px-24 md:px-12 px-4 py-10 w-full text-white">
+      {/* <Navbar /> */}
       <Home />
       <Project />
       <About />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );
