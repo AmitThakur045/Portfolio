@@ -91,8 +91,8 @@ const skills = [
 const About = () => {
   return (
     <>
-      <div className="w-full flex flex-col" id="about">
-        <div className="w-full flex justify-center items-center text-[#f30841] text-sm font-semibold">
+      <div className="w-full flex flex-col pt-8" id="about">
+        <div className="w-full flex justify-center items-center text-[#f30841] text-sm font-semibold mb-4">
           GET TO KNOW
         </div>
         <div className="w-full flex justify-center items-center text-5xl font-bold pb-8">

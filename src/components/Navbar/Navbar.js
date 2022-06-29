@@ -1,4 +1,5 @@
 import React from "react";
+import Amit_Resume from "../../assets/Resume/Amit_Resume.pdf";
 
 const Navbar = () => {
   return (
@@ -26,9 +27,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="col-span-2 w-full flex justify-end">
-        <button className="animate-bounce bg-[#f30841] px-4 py-[0.3rem] rounded-3xl text-sm hover:cursor-pointer hover:scale-105 hover:bg-white hover:text-[#f30841] duration-300 transition-all">
-          DOWNLOAD CV
-        </button>
+        <a href={Amit_Resume} download>
+          <button className="animate-bounce bg-[#f30841] px-4 py-[0.3rem] rounded-3xl text-sm hover:cursor-pointer hover:scale-105 hover:bg-white hover:text-[#f30841] duration-300 transition-all">
+            DOWNLOAD CV
+          </button>
+        </a>
       </div>
     </div>
   );
