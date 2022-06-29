@@ -62,10 +62,10 @@ const Project = () => {
             Projects
           </h1>
         </div>
-        <div className="w-full flex flex-wrap pt-6">
+        <div className="w-full flex flex-wrap pt-6 justify-evenly">
           {data.map((item, i) => (
-            <div className="flex justify-center items-center lg:w-[27.7vw] md:w-[25vw] w-full p-[1rem] hover:scale-105 duration-300 ease-in">
-              <div className="w-full bg-[#101118] bg-opacity-80 hover:bg-opacity-60 p-[1.2rem] rounded-lg hover:cursor-pointer space-y-4">
+            <div className="flex flex-row justify-center items-end lg:h-[19rem] lg:w-[18.3rem] md:w-[20rem] sm:w-[18rem] w-full p-[1rem] hover:scale-105 duration-300 ease-in">
+              <div className="w-full flex flex-col justify-between bg-[#101118] h-full bg-opacity-80 hover:bg-opacity-60 p-[1.2rem] rounded-lg hover:cursor-pointer space-y-4">
                 <div className="flex items-center justify-between w-full">
                   <GoProject className="text-[#f30841]" fontSize={"2.4rem"} />
                   {/* <h1 className="text-2xl hover:text-[#f30841] duration-300 ease-in">
@@ -76,7 +76,7 @@ const Project = () => {
                   {item.name}
                 </h1>
                 <div className="text-gray-400 w-">{item.description}</div>
-                <div className="flex w-full justify-between items-center space-x-2">
+                <div className="flex items-end lg:flex-row md:flex-col flex-row md:space-y-2 lg:space-y-0 space-y-0 w-full justify-between md:space-x-0 lg:space-x-2 space-x-2">
                   <a
                     href={item.github}
                     target="_blank"
