@@ -1,10 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
-
-// import { IoIosMail } from "react-icons/io";
 import { GrMail } from "react-icons/gr";
 import { RiWhatsappFill } from "react-icons/ri";
-import { MdCall } from "react-icons/md";
 import { SiLinkedin } from "react-icons/si";
 
 const contactOptionsList = [
