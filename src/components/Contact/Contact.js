@@ -72,7 +72,7 @@ const Contact = () => {
             Contact Me
           </h1>
         </div>
-        <div className="flex mt-14">
+        <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 justify-center space-x-4 mt-14">
           <div className="flex-[0.3] flex flex-col items-center space-y-5">
             {contactOptionsList.map((contactOption) => {
               const Icon = contactOption.logo;
@@ -103,11 +103,11 @@ const Contact = () => {
               );
             })}
           </div>
-          <div className="flex-[0.7] flex">
+          <div className="flex-[0.7] flex justify-center">
             <form
               ref={form}
               onSubmit={submitHandler}
-              className="flex flex-col space-y-5 w-[40rem]"
+              className="flex flex-col space-y-5 lg:w-[40rem] md:w-[30rem] sm:w-[26rem] w-full"
             >
               <div className="flex w-full md:flex-row items-start flex-col md:space-x-2 space-y-5 md:space-y-0">
                 <input
@@ -139,16 +139,16 @@ const Contact = () => {
                   placeholder="Write to us!"
                 />
               </div>
-              <div className="flex w-full space-x-3 justify-end">
+              <div className="flex w-full space-x-3 sm:justify-end justify-center">
                 <button
                   type="submit"
-                  className="w-[8rem] flex border-[#f30841] border-[0.1rem] hover:bg-white hover:border-white hover:text-[#f30841] duration-300 ease-in hover:text-semibold py-1 rounded-md justify-center items-center"
+                  className="sm:w-[8rem] w-full flex border-[#f30841] border-[0.1rem] hover:bg-white hover:border-white hover:text-[#f30841] duration-300 ease-in hover:text-semibold py-1 rounded-md justify-center items-center"
                 >
                   Clear
                 </button>
                 <button
                   type="submit"
-                  className="w-[8rem] flex bg-[#f30841] rounded-md py-1 justify-center items-center hover:bg-white hover:text-[#f30841] duration-300 ease-in hover:text-semibold"
+                  className="sm:w-[8rem] w-full flex bg-[#f30841] rounded-md py-1 justify-center items-center hover:bg-white hover:text-[#f30841] duration-300 ease-in hover:text-semibold"
                 >
                   Submit
                 </button>

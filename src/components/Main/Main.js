@@ -13,7 +13,7 @@ const Main = () => {
       <Home />
       <Project />
       <About />
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </div>
   );
