@@ -174,7 +174,7 @@ const About = () => {
               <div className="pb-4 w-full flex flex-wrap text-white">
                 {skills.map((item, index) => (
                   <div
-                    className="flex w-fit m-4 mx-6 p-3 rounded-md bg-[#101118] hover:bg-opacity-80 hover:text-[#f30841] hover:cursor-pointer hover:scale-105 duration-200 transition-all"
+                    className="flex w-fit sm:m-4 m-2 sm:mx-6 p-3 rounded-md bg-[#101118] hover:bg-opacity-80 hover:text-[#f30841] hover:cursor-pointer hover:scale-105 duration-200 transition-all"
                     key={index}
                     style={{
                       backgroundImage: `repeating-linear-gradient(
