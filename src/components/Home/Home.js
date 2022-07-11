@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
+import Typed from "typed.js";
 import myImage from "../../assets/myImage.png";
 import {
   SiCodeforces,
@@ -10,6 +11,32 @@ import {
 } from "react-icons/si";
 
 const Home = () => {
+  const title = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(title.current, {
+      strings: [
+        "Frontend Developer",
+        "Backend Developer",
+        "Competitive Programmer",
+      ], // Strings to display
+      // Speed settings, try diffrent values untill you get good results
+      startDelay: 300,
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 100,
+      smartBackspace: true,
+      loop: true,
+      showCursor: true,
+      cursorChar: "!",
+    });
+
+    // Destropying
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <>
       <div className="flex md:flex-row flex-col md:space-x-3" id="home">
@@ -21,7 +48,7 @@ const Home = () => {
             Amit Thakur
           </h1>
           <p className="text-[1.4rem] font-semibold pb-0">
-            FullStack Web Developer and Competitive Coder
+            I am <span ref={title}></span>
           </p>
           <p className="text-[1rem] pt-5 text-gray-400 w-full">
             I'm a MERN-Stack Web-Developer. Currently pursuing my Bachelor's in
