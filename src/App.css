@@ -14,3 +14,7 @@ body {
   );
   background-size: 4px 4px;
 }
+::selection {
+  background-color: #f30841;
+  color: #ffffff;
+}

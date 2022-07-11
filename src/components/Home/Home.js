@@ -29,6 +29,7 @@ const Home = () => {
       loop: true,
       showCursor: true,
       cursorChar: "!",
+      cursorColor: "#f30841",
     });
 
     // Destropying
