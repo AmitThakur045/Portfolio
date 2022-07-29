@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
+import JumbleWord from "../../Utils/JumbleWord";
 import Typed from "typed.js";
 import myImage from "../../assets/myImage.png";
 import {
@@ -29,7 +29,6 @@ const Home = () => {
       loop: true,
       showCursor: true,
       cursorChar: "!",
-      cursorColor: "#f30841",
     });
 
     // Destropying
@@ -45,11 +44,11 @@ const Home = () => {
           <h1 className="text-[1.4rem] font-semibold pb-0">
             Hello, <span>I'm</span>
           </h1>
-          <h1 className="text-[3.4rem] font-bold text-[#f30841] hover:scale-110 transition-all duration-300 hover:text-white hover:translate-x-7 hover:cursor-pointer">
-            Amit Thakur
-          </h1>
+          <div className="text-[#f0023e] sm:text-[5rem] text-[3rem] font-extrabold flex flex-row justify-start">
+            <JumbleWord word={"Amit-Thakur"} color={"#ffffff"} />
+          </div>
           <p className="text-[1.4rem] font-semibold pb-0">
-            I am <span ref={title}></span>
+            I am <span className="font-bold text-[#f0023e]" ref={title}></span>
           </p>
           <p className="text-[1rem] pt-5 text-gray-400 w-full">
             I'm a MERN-Stack Web-Developer. Currently pursuing my Bachelor's in

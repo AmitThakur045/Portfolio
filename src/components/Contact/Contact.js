@@ -3,36 +3,30 @@ import emailjs from "emailjs-com";
 import { GrMail } from "react-icons/gr";
 import { RiWhatsappFill } from "react-icons/ri";
 import { SiLinkedin } from "react-icons/si";
+import JumbleWord from "../../Utils/JumbleWord";
 
 const contactOptionsList = [
   {
     logo: GrMail,
     link: "mailto:amitthakur.techgeek@gmail.com",
     name: "Email",
-    text: "Send a Mail",
+    text: "Send-a-Mail",
     color: "#C14438",
   },
   {
     logo: SiLinkedin,
     link: "https://www.linkedin.com/in/amit-kumar-thakur-3024b51b7/",
     name: "Messenger",
-    text: "Send a Message",
+    text: "Send-a-Message",
     color: "#006AFF",
   },
   {
     logo: RiWhatsappFill,
     link: "https://wa.me/918800541938?text=Hello%20Amit%20Thakur",
     name: "WhatsApp",
-    text: "Send a Message",
+    text: "Send-a-Message",
     color: "#25D366",
   },
-  //   {
-  //     logo: MdCall,
-  //     link: "tel:+918800541938",
-  //     name: "+91 8800541938",
-  //     text: "Call Me",
-  //     color: "#128C7E",
-  //   },
 ];
 
 const Contact = () => {
@@ -67,9 +61,9 @@ const Contact = () => {
         <div className="w-full flex justify-center items-center text-[#f30841] text-sm font-semibold">
           GET IN TOUCH
         </div>
-        <div className="w-full flex justify-center items-center text-5xl font-bold pb-7">
-          <h1 className="ease-linear hover:scale-110 duration-300 transition-all hover:text-[#f30841] hover:cursor-pointer">
-            Contact Me
+        <div className="w-full flex justify-center items-center text-5xl font-bold sm:pb-7 pb-3">
+          <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
+            <JumbleWord word={"Contact Me"} color={"#f0023e"} />
           </h1>
         </div>
         <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 justify-center sm:space-x-4 mt-14">
@@ -90,12 +84,18 @@ const Contact = () => {
                           className="text-[2rem]"
                           style={{ color: contactOption.color }}
                         />
-                        <h1 className="hover:text-[#f30841] ease-in duration-300">
-                          {contactOption.name}
+                        <h1 className="flex flex-row">
+                          <JumbleWord
+                            word={contactOption.name}
+                            color={"#f0023e"}
+                          />
                         </h1>
                       </div>
-                      <p className="hover:text-[#f30841] ease-in duration-300">
-                        {contactOption.text}
+                      <p className="flex flex-row">
+                        <JumbleWord
+                          word={contactOption.text}
+                          color={"#f0023e"}
+                        />
                       </p>
                     </div>
                   </a>

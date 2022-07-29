@@ -1,5 +1,5 @@
 import React from "react";
-
+import JumbleWord from "../../Utils/JumbleWord";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -19,7 +19,7 @@ import { DiGit } from "react-icons/di";
 
 const data = [
   {
-    name: "Competetitive Coding",
+    name: "Competetitive-Coding",
     description:
       "I also do bit of competitive coding. I have attended multiple coding contest in the past and have also gained some good knowledge of DSA. Currently I am 4 Star on Codechef and Pupil on Codeforces and have a rating of 1650+ on leetcode with 12+ badges.",
     achievement: [
@@ -48,39 +48,39 @@ const data = [
 const skills = [
   {
     name: "React",
-    icon: <FaReact size={30} />,
+    icon: <FaReact size={30} style={{ fill: "#60d9fa" }} />,
   },
   {
     name: "Redux",
-    icon: <SiRedux size={30} />,
+    icon: <SiRedux size={30} style={{ fill: "#764abc" }} />,
   },
   {
     name: "TailwindCss",
-    icon: <SiTailwindcss size={30} />,
+    icon: <SiTailwindcss size={30} style={{ fill: "#13a7e9" }} />,
   },
   {
     name: "C++",
-    icon: <SiCplusplus size={30} />,
+    icon: <SiCplusplus size={30} style={{ fill: "#6295cb" }} />,
   },
   {
     name: "Firebase",
-    icon: <SiFirebase size={30} />,
+    icon: <SiFirebase size={30} style={{ fill: "#f4c43d" }} />,
   },
   {
     name: "JavaScript",
-    icon: <SiJavascript size={30} />,
+    icon: <SiJavascript size={30} style={{ fill: "#e8d44d" }} />,
   },
   {
     name: "Node",
-    icon: <SiNodedotjs size={30} />,
+    icon: <SiNodedotjs size={30} style={{ fill: "#509941" }} />,
   },
   {
     name: "MongoDB",
-    icon: <SiMongodb size={30} />,
+    icon: <SiMongodb size={30} style={{ fill: "#4caa3d" }} />,
   },
   {
     name: "Git",
-    icon: <DiGit size={30} />,
+    icon: <DiGit size={30} style={{ fill: "#e84e31" }} />,
   },
   {
     name: "Github",
@@ -96,8 +96,8 @@ const About = () => {
           GET TO KNOW
         </div>
         <div className="w-full flex justify-center items-center text-5xl font-bold pb-8">
-          <h1 className="ease-linear hover:scale-110 duration-300 transition-all hover:text-[#f30841] hover:cursor-pointer">
-            About Me
+          <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
+            <JumbleWord word={"About-Me"} color={"#f0023e"} />
           </h1>
         </div>
         <div className="w-full">
@@ -113,8 +113,8 @@ const About = () => {
                 }}
               >
                 <Typography>
-                  <h1 className="text-white font-semibold hover:scale-105 hover:cursor-pointer hover:text-[#f30841] duration-200 ease-in">
-                    {item.name}
+                  <h1 className="text-white font-semibold text-[1.2rem] hover:cursor-pointer flex justify-start">
+                    <JumbleWord word={item.name} color={"#f0023e"} />
                   </h1>
                 </Typography>
               </AccordionSummary>
@@ -160,8 +160,8 @@ const About = () => {
               }}
             >
               <Typography>
-                <h1 className="text-white font-semibold hover:scale-105 hover:cursor-pointer hover:text-[#f30841] duration-200 ease-in">
-                  Skills
+                <h1 className="text-white font-semibold text-[1.2rem] hover:cursor-pointer flex justify-start">
+                  <JumbleWord word={"Skills"} color={"#f0023e"} />
                 </h1>
               </Typography>
             </AccordionSummary>
