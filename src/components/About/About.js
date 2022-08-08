@@ -88,16 +88,19 @@ const skills = [
   },
 ];
 
-const About = () => {
+const About = ({ color }) => {
   return (
     <>
       <div className="w-full flex flex-col pt-8" id="about">
-        <div className="w-full flex justify-center items-center text-[#f30841] text-sm font-semibold mb-4">
+        <div
+          style={{ color: color }}
+          className="w-full flex justify-center items-center text-sm font-semibold mb-4"
+        >
           GET TO KNOW
         </div>
         <div className="w-full flex justify-center items-center text-5xl font-bold pb-8">
           <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
-            <JumbleWord word={"About-Me"} color={"#f0023e"} />
+            <JumbleWord word={"About-Me"} color={color} secondary={"white"} />
           </h1>
         </div>
         <div className="w-full">
@@ -114,7 +117,11 @@ const About = () => {
               >
                 <Typography>
                   <h1 className="text-white font-semibold text-[1.2rem] hover:cursor-pointer flex justify-start">
-                    <JumbleWord word={item.name} color={"#f0023e"} />
+                    <JumbleWord
+                      word={item.name}
+                      color={color}
+                      secondary={"white"}
+                    />
                   </h1>
                 </Typography>
               </AccordionSummary>
@@ -137,7 +144,7 @@ const About = () => {
                           key={index}
                           className="flex flex-row text-sm text-gray-400 py-1"
                         >
-                          <p className="font-bold text-[#f30841]">
+                          <p className="font-bold" style={{ color: color }}>
                             {ele.name}: &nbsp;
                           </p>
                           {ele.rank}
@@ -161,7 +168,11 @@ const About = () => {
             >
               <Typography>
                 <h1 className="text-white font-semibold text-[1.2rem] hover:cursor-pointer flex justify-start">
-                  <JumbleWord word={"Skills"} color={"#f0023e"} />
+                  <JumbleWord
+                    word={"Skills"}
+                    color={color}
+                    secondary={"white"}
+                  />
                 </h1>
               </Typography>
             </AccordionSummary>
@@ -174,7 +185,7 @@ const About = () => {
               <div className="pb-4 w-full flex flex-wrap text-white">
                 {skills.map((item, index) => (
                   <div
-                    className="flex w-fit sm:m-4 m-2 sm:mx-6 p-3 rounded-md bg-[#101118] hover:bg-opacity-80 hover:text-[#f30841] hover:cursor-pointer hover:scale-105 duration-200 transition-all"
+                    className="flex w-fit sm:m-4 m-2 sm:mx-6 p-3 rounded-md bg-[#101118] hover:bg-opacity-80 hover:scale-105 duration-200"
                     key={index}
                     style={{
                       backgroundImage: `repeating-linear-gradient(

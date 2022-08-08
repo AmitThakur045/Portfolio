@@ -1,35 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Amit_Thakur_Resume from "../../assets/Resume/Amit_Thakur_Resume.pdf";
+import { SingleTag } from "./SingleTag";
 
-const Navbar = () => {
+const Navbar = ({ color }) => {
+  const [hoverButton, setHoverButton] = useState(false);
+
   return (
     <div className="m-0 p-0 sm:block hidden">
       <div className="w-full grid-cols-6 flex">
         <div className="col-span-2 w-full flex justify-start text-4xl font-extrabold">
-          <h1 className="text-[#f30841] hover:text-white duration-300 transition-all hover:cursor-pointer">
+          <h1 style={{ color: color }} className="">
             A
           </h1>
-          <h1 className="text-white hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
-            MIT
-          </h1>
+          <h1 className="text-white">MIT</h1>
         </div>
         <div className="col-span-2 flex w-full space-x-6 text-gray-200 text-[0.8rem] font-semibold">
-          <div className="hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
-            <a href="#home">HOME</a>
-          </div>
-          <div className="hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
-            <a href="#project">PROJECT</a>
-          </div>
-          <div className="hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
-            <a href="#about">ABOUT</a>
-          </div>
-          <div className="hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
-            <a href="#contact">CONTACT</a>
-          </div>
+          <SingleTag name={"HOME"} color={color} />
+          <SingleTag name={"PROJECT"} color={color} />
+          <SingleTag name={"ABOUT"} color={color} />
+          <SingleTag name={"CONTACT"} color={color} />
         </div>
         <div className="col-span-2 w-full flex justify-end">
           <a href={Amit_Thakur_Resume} download>
-            <button className="animate-bounce bg-[#f30841] px-4 py-[0.3rem] rounded-3xl text-sm hover:cursor-pointer hover:scale-105 hover:bg-white hover:text-[#f30841] duration-300 transition-all">
+            <button
+              style={{
+                color: hoverButton ? color : "white",
+                backgroundColor: hoverButton ? "white" : color,
+              }}
+              onMouseEnter={() => setHoverButton(true)}
+              onMouseLeave={() => setHoverButton(false)}
+              className="animate-bounce px-4 py-[0.3rem] rounded-3xl text-sm hover:cursor-pointer hover:scale-105 duration-300 transition-all"
+            >
               DOWNLOAD CV
             </button>
           </a>

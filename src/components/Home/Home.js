@@ -10,7 +10,7 @@ import {
   SiLeetcode,
 } from "react-icons/si";
 
-const Home = () => {
+const Home = ({ color }) => {
   const title = useRef(null);
 
   useEffect(() => {
@@ -44,11 +44,23 @@ const Home = () => {
           <h1 className="text-[1.4rem] font-semibold pb-0">
             Hello, <span>I'm</span>
           </h1>
-          <div className="text-[#f0023e] sm:text-[5rem] text-[3rem] font-extrabold flex flex-row justify-start">
-            <JumbleWord word={"Amit-Thakur"} color={"#ffffff"} />
+          <div
+            style={{ color: color }}
+            className={`sm:text-[5rem] text-[3rem] font-extrabold flex flex-row justify-start`}
+          >
+            <JumbleWord
+              word={"Amit-Thakur"}
+              color={color}
+              secondary={"white"}
+            />
           </div>
           <p className="text-[1.4rem] font-semibold pb-0">
-            I am <span className="font-bold text-[#f0023e]" ref={title}></span>
+            I am{" "}
+            <span
+              style={{ color: color }}
+              className={`font-bold`}
+              ref={title}
+            ></span>
           </p>
           <p className="text-[1rem] pt-5 text-gray-400 w-full">
             I'm a MERN-Stack Web-Developer. Currently pursuing my Bachelor's in

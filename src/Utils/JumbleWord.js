@@ -30,7 +30,7 @@ const JumbleWord = (props) => {
                 damping: 30,
                 duration: 0.5,
               }}
-              className=""
+              style={{ color: props.secondary }}
               key={idx}
             >
               {letter}

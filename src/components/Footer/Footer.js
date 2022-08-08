@@ -8,16 +8,14 @@ import {
   SiLeetcode,
 } from "react-icons/si";
 
-const Footer = () => {
+const Footer = ({ color }) => {
   return (
     <div className="w-full h-[15rem] flex flex-col items-center">
       <div className="w-full flex justify-center text-4xl font-extrabold pb-10">
-        <h1 className="text-[#f30841] hover:text-white duration-300 transition-all hover:cursor-pointer">
+        <h1 style={{ color: color }} className="">
           A
         </h1>
-        <h1 className="text-white hover:text-[#f30841] duration-300 transition-all hover:cursor-pointer">
-          MIT
-        </h1>
+        <h1 className="text-white">MIT</h1>
       </div>
       <div className="flex space-x-5">
         <a

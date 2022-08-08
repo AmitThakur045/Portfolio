@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { GrMail } from "react-icons/gr";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -29,8 +29,11 @@ const contactOptionsList = [
   },
 ];
 
-const Contact = () => {
+const Contact = ({ color }) => {
   const form = useRef();
+
+  const [isClear, setIsClear] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -58,12 +61,15 @@ const Contact = () => {
   return (
     <>
       <div className="flex flex-col pt-10" id="contact">
-        <div className="w-full flex justify-center items-center text-[#f30841] text-sm font-semibold">
+        <div
+          style={{ color: color }}
+          className="w-full flex justify-center items-center text-sm font-semibold"
+        >
           GET IN TOUCH
         </div>
         <div className="w-full flex justify-center items-center text-5xl font-bold sm:pb-7 pb-3">
           <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
-            <JumbleWord word={"Contact Me"} color={"#f0023e"} />
+            <JumbleWord word={"Contact Me"} color={color} secondary={"white"} />
           </h1>
         </div>
         <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 justify-center sm:space-x-4 mt-14">
@@ -87,14 +93,16 @@ const Contact = () => {
                         <h1 className="flex flex-row">
                           <JumbleWord
                             word={contactOption.name}
-                            color={"#f0023e"}
+                            color={color}
+                            secondary={"white"}
                           />
                         </h1>
                       </div>
                       <p className="flex flex-row">
                         <JumbleWord
                           word={contactOption.text}
-                          color={"#f0023e"}
+                          color={color}
+                          secondary={"white"}
                         />
                       </p>
                     </div>
@@ -111,13 +119,15 @@ const Contact = () => {
             >
               <div className="flex w-full md:flex-row items-start flex-col md:space-x-2 space-y-5 md:space-y-0">
                 <input
-                  className="pl-2 w-full border-1 rounded-md h-[3rem] text-[#f30841] bg-opacity-100 bg-white"
+                  style={{ color: color }}
+                  className="pl-2 w-full border-1 rounded-md h-[3rem] bg-opacity-100 bg-white"
                   type="text"
                   name="username"
                   placeholder="Name"
                 />
                 <input
-                  className="pl-2 w-full border-1 rounded-md h-[3rem] text-[#f30841] bg-opacity-100 bg-white"
+                  style={{ color: color }}
+                  className="pl-2 w-full border-1 rounded-md h-[3rem] bg-opacity-100 bg-white"
                   type="type"
                   name="company"
                   placeholder="Current Organization"
@@ -125,7 +135,8 @@ const Contact = () => {
               </div>
               <div className="w-full">
                 <input
-                  className="pl-2 w-full border-1 rounded-md h-[3rem] text-[#f30841] bg-opacity-100 bg-white"
+                  style={{ color: color }}
+                  className="pl-2 w-full border-1 rounded-md h-[3rem] bg-opacity-100 bg-white"
                   type="email"
                   name="email"
                   placeholder="Email"
@@ -133,7 +144,8 @@ const Contact = () => {
               </div>
               <div className="w-full items-center">
                 <textarea
-                  className="pl-2 pt-2 w-full border-1 rounded-md  text-[#f30841] bg-opacity-100 bg-white"
+                  style={{ color: color }}
+                  className="pl-2 pt-2 w-full border-1 rounded-md bg-opacity-100 bg-white"
                   rows="5"
                   name="query"
                   placeholder="Write to us!"
@@ -141,14 +153,28 @@ const Contact = () => {
               </div>
               <div className="flex w-full space-x-3 sm:justify-end justify-center">
                 <button
+                  onMouseEnter={() => setIsClear(true)}
+                  onMouseLeave={() => setIsClear(false)}
+                  style={{
+                    borderColor: isClear ? "white" : color,
+                    backgroundColor: isClear ? "white" : "transparent",
+                    color: isClear ? color : "white",
+                  }}
                   type="submit"
-                  className="sm:w-[8rem] w-full flex border-[#f30841] border-[0.1rem] hover:bg-white hover:border-white hover:text-[#f30841] duration-300 ease-in hover:text-semibold py-1 rounded-md justify-center items-center"
+                  className="sm:w-[8rem] w-full flex border-[0.1rem] duration-300 ease-in hover:text-semibold hover:bg-white py-1 rounded-md justify-center items-center"
                 >
                   Clear
                 </button>
                 <button
                   type="submit"
-                  className="sm:w-[8rem] w-full flex bg-[#f30841] rounded-md py-1 justify-center items-center hover:bg-white hover:text-[#f30841] duration-300 ease-in hover:text-semibold"
+                  onMouseEnter={() => setIsSubmit(true)}
+                  onMouseLeave={() => setIsSubmit(false)}
+                  style={{
+                    borderColor: "white",
+                    backgroundColor: isSubmit ? "white" : color,
+                    color: isSubmit ? color : "white",
+                  }}
+                  className="sm:w-[8rem] w-full flex rounded-md py-1 justify-center items-center duration-300 ease-in hover:text-semibold"
                 >
                   Submit
                 </button>
