@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { ChromePicker } from "react-color";
-import { ColorState } from "../context/ColorProvider";
-import { HiColorSwatch } from "react-icons/hi";
 import { GrClose } from "react-icons/gr";
+import { IoMdColorPalette } from "react-icons/io";
 
 const ColorPicker = ({ color, setColor }) => {
   const [showPicker, setShowPicker] = useState(false);
@@ -26,7 +25,7 @@ const ColorPicker = ({ color, setColor }) => {
           />
         </div>
       ) : (
-        <HiColorSwatch
+        <IoMdColorPalette
           className={`cursor-pointer`}
           onClick={() => setShowPicker(!showPicker)}
           fill={color}

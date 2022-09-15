@@ -23,13 +23,14 @@ const data = [
   },
 ];
 
-const Downbar = () => {
+const Downbar = ({ color }) => {
   return (
     <div className="sm:hidden bottom-6 fixed h-[5.2rem] w-full bg-opacity-0 flex justify-center p-3">
-      <div className="w-[70vw] px-6 border-2 border-[#f30841] bg-[#23282e] bg-opacity-80 rounded-full flex justify-between items-center">
+      <div style={{ borderColor: color}} className="w-[70vw] px-6 border-2 bg-[#23282e] bg-opacity-80 rounded-full flex justify-between items-center">
         {data.map((item, index) => (
           <a
-            className="rounded-full border-2 border-[#f30841] w-[2.5rem] h-[2.5rem] text-black bg-white flex items-center justify-center hover:text-[#f30841]"
+            style={{ borderColor: color}}
+            className="rounded-full border-2 w-[2.5rem] h-[2.5rem] text-black bg-white flex items-center justify-center"
             href={item.refr}
             key={index}
           >
