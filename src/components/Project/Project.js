@@ -62,7 +62,7 @@ const Project = ({ color }) => {
   ];
   return (
     <>
-      <div className="flex flex-col pt-10" id="project">
+      <div className="flex flex-col pt-10 snap-start" id="project">
         <div
           style={{ color: color }}
           className="w-full flex justify-center items-center text-sm font-semibold"

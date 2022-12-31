@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import JumbleWord from "../../Utils/JumbleWord";
 import Typed from "typed.js";
-import myImage from "../../assets/myImage.png";
+import myImage from "../../assets/myImage.jpeg";
 import {
   SiCodeforces,
   SiCodechef,
@@ -9,6 +9,7 @@ import {
   SiGithub,
   SiLeetcode,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Home = ({ color }) => {
   const title = useRef(null);
@@ -39,8 +40,24 @@ const Home = ({ color }) => {
 
   return (
     <>
-      <div className="flex md:flex-row flex-col md:space-x-3" id="home">
-        <div className="md:flex-[0.6] flex flex-col sm:pt-[5rem] w-full">
+      <div
+        className="flex md:flex-row flex-col md:space-x-3 snap-start"
+        id="home"
+      >
+        <motion.div
+          initial={{
+            x: -200,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.4,
+          }}
+          className="md:flex-[0.6] flex flex-col sm:pt-[5rem] w-full"
+        >
           <h1 className="text-[1.4rem] font-semibold pb-0">
             Hello, <span>I'm</span>
           </h1>
@@ -70,8 +87,10 @@ const Home = ({ color }) => {
             bit of Competitive programming.
           </p>
           <div className="pt-12 space-y-3">
-            <h1 className="font-semibold">FIND ME ON</h1>
-            <div className="flex sm:space-x-5 space-x-3">
+            <h1 className="font-semibold w-full md:text-left text-center tracking-[10px] uppercase">
+              Socials
+            </h1>
+            <div className="flex sm:space-x-5 space-x-3 w-full justify-center md:justify-start">
               <a
                 href="https://www.linkedin.com/in/amit-kumar-thakur-3024b51b7/"
                 alt="linkdin"
@@ -109,8 +128,22 @@ const Home = ({ color }) => {
               </a>
             </div>
           </div>
-        </div>
-        <div className="md:flex-[0.4] w-full flex flex-row pt-32 md:justify-end justify-center items-center">
+        </motion.div>
+
+        <motion.div
+          initial={{
+            x: 200,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.4,
+          }}
+          className="md:flex-[0.4] w-full flex flex-row pt-32 md:justify-end justify-center items-center"
+        >
           <div
             className="flex justify-end bg-[#101118] bg-opacity-80 rounded-lg h-[22rem] items-end shadow-lg"
             style={{
@@ -124,9 +157,13 @@ const Home = ({ color }) => {
               backgroundSize: "4px 4px",
             }}
           >
-            <img src={myImage} className="h-[30rem] rounded-lg" alt="profile" />
+            <img
+              src={myImage}
+              className="md:h-[26rem] md:w-[20rem] h-[25rem] w-[20rem] object-cover rounded-lg"
+              alt="profile"
+            />
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="bg-[#101118] bg-opacity-80 w-full py-[0.1rem] my-12"></div>
     </>

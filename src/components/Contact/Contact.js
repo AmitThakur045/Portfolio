@@ -60,7 +60,7 @@ const Contact = ({ color }) => {
 
   return (
     <>
-      <div className="flex flex-col pt-10" id="contact">
+      <div className="flex flex-col pt-10 snap-start" id="contact">
         <div
           style={{ color: color }}
           className="w-full flex justify-center items-center text-sm font-semibold"

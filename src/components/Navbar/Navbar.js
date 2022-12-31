@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Amit_Thakur_Resume from "../../assets/Resume/Amit_Thakur_Resume.pdf";
 import { SingleTag } from "./SingleTag";
+import { motion } from "framer-motion";
 
 const Navbar = ({ color }) => {
   const [hoverButton, setHoverButton] = useState(false);
@@ -8,19 +9,58 @@ const Navbar = ({ color }) => {
   return (
     <div className="m-0 p-0 sm:block hidden">
       <div className="w-full grid-cols-6 flex">
-        <div className="col-span-2 w-full flex justify-start text-4xl font-extrabold">
-          <h1 style={{ color: color }} className="">
+        <motion.div
+          initial={{
+            x: -100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          className="col-span-2 w-full flex justify-start items-center text-4xl font-extrabold"
+        >
+          <span style={{ color: color }} className="">
             A
-          </h1>
-          <h1 className="text-white">MIT</h1>
-        </div>
-        <div className="col-span-2 flex w-full space-x-6 text-gray-200 text-[0.8rem] font-semibold">
+          </span>
+          <span className="text-white">MIT</span>
+        </motion.div>
+
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 2,
+          }}
+          className="col-span-2 flex w-full justify-center items-center space-x-6 text-gray-200 text-[1rem] font-semibold"
+        >
           <SingleTag name={"HOME"} color={color} />
           <SingleTag name={"PROJECT"} color={color} />
           <SingleTag name={"ABOUT"} color={color} />
           <SingleTag name={"CONTACT"} color={color} />
-        </div>
-        <div className="col-span-2 w-full flex justify-end">
+        </motion.div>
+
+        <motion.div
+          initial={{
+            x: 100,
+            opacity: 0,
+          }}
+          whileInView={{
+            x: 0,
+            opacity: 1,
+          }}
+          transition={{
+            duration: 1.2,
+          }}
+          className="col-span-2 w-full flex justify-end items-center"
+        >
           <a href={Amit_Thakur_Resume} download>
             <button
               style={{
@@ -29,12 +69,12 @@ const Navbar = ({ color }) => {
               }}
               onMouseEnter={() => setHoverButton(true)}
               onMouseLeave={() => setHoverButton(false)}
-              className="animate-bounce px-4 py-[0.3rem] rounded-3xl text-sm hover:cursor-pointer hover:scale-105 duration-300 transition-all"
+              className="animate-pulse px-4 py-[0.3rem] rounded-3xl text-sm hover:cursor-pointer hover:scale-105 duration-300 transition-all"
             >
               DOWNLOAD CV
             </button>
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
