@@ -64,7 +64,7 @@ const Home = ({ color }) => {
           </h1>
           <div
             style={{ color: color }}
-            className={`sm:text-[5rem] text-[3rem] font-extrabold flex flex-row justify-start`}
+            className={`sm:text-[5rem] text-[2rem] font-extrabold flex flex-row justify-start`}
           >
             <JumbleWord
               word={"Amit-Thakur"}

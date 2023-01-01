@@ -205,28 +205,26 @@ const Project = ({ color }) => {
         </div>
 
         <div className="w-full flex justify-center items-center text-5xl font-bold pb-7">
-          <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
+          <h1 className="text-[#ffffff] flex flex-row justify-center sm:text-[3rem] text-[2rem]">
             <JumbleWord word={"Projects"} color={color} secondary={"white"} />
           </h1>
         </div>
 
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          transition={{
-            duration: 0.5,
-          }}
-          viewport={{ once: true }}
-          className="flex flex-wrap space-x-3 justify-center lg:px-20"
-        >
+        <div className="flex flex-wrap space-x-3 justify-center lg:px-20">
           {techList.map((tech) => (
-            <button
+            <motion.button
+              initial={{
+                scale: 0,
+                opacity: 0,
+              }}
+              whileInView={{
+                scale: 1,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+              }}
+              viewport={{ once: true }}
               key={tech.id}
               className={
                 tech.name.toUpperCase() === currTech.toUpperCase()
@@ -236,9 +234,9 @@ const Project = ({ color }) => {
               onClick={() => setCurrTech(tech.name)}
             >
               {tech.name}
-            </button>
+            </motion.button>
           ))}
-        </motion.div>
+        </div>
 
         <div className="w-full flex flex-wrap pt-6 justify-evenly h-fit">
           {projectList.map((item, i) => (

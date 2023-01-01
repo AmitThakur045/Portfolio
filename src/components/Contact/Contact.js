@@ -68,7 +68,7 @@ const Contact = ({ color }) => {
           GET IN TOUCH
         </div>
         <div className="w-full flex justify-center items-center text-5xl font-bold sm:pb-7 pb-3">
-          <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
+          <h1 className="text-[#ffffff] flex flex-row justify-center sm:text-[3rem] text-[2rem]">
             <JumbleWord word={"Contact-Me"} color={color} secondary={"white"} />
           </h1>
         </div>

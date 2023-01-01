@@ -18,16 +18,16 @@ const ProjectCard = ({ project }) => {
         duration: 0.5,
       }}
       viewport={{ once: true }}
-      className="flex w-fit"
+      className="flex w-fit mx-auto"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      <div className="w-full flex flex-col my-2">
-        <div className="bg-[#dddddd] text-[#636363] rounded-tl-md rounded-tr-md w-full text-center font-bold p-1 z-20">
+      <div className="sm:w-[25rem] w-[20rem] flex flex-col my-2">
+        <div className="bg-[#dddddd] text-[#636363] rounded-tl-md rounded-tr-md w-full text-center font-bold p-1 z-20 tracking-[6px]">
           {project.name}
         </div>
         <img
-          className={`w-[25rem] h-[12.5rem] relative rounded-bl-md rounded-br-md z-10`}
+          className={`sm:w-[25rem] w-[20rem] sm:h-[12.5rem] h-[10rem] relative rounded-bl-md rounded-br-md z-10`}
           src={project.image}
           alt=""
         />
@@ -47,12 +47,12 @@ const ProjectCard = ({ project }) => {
         }}
         className={`absolute ${
           isHover ? "inline-block" : "hidden"
-        } w-[25rem] h-[12.5rem] flex flex-col aspect-auto bg-[#14161c]/90 z-20 mt-10 rounded-bl-md rounded-br-md`}
+        } sm:w-[25rem] w-[20rem] sm:h-[12.5rem] h-[10rem] flex flex-col aspect-auto bg-[#14161c]/90 z-20 mt-10 rounded-bl-md rounded-br-md`}
       >
-        <div className="w-full my-auto">
-          <div className="flex flex-wrap justify-evenly mt-2 p-3 px-8 w-full h-auto">
+        <div className="sm:w-[25rem] w-[20rem] my-auto">
+          <div className="flex flex-wrap justify-evenly mt-2 sm:p-3 sm:px-8 w-full h-auto">
             {project.tech.map((data) => (
-              <span className="mt-1 uppercase text-gray-300 text-xs p-2 bg-[#313131] font-bold rounded border-b-4 border-r-4 hover:border-b-2 hover:border-r-2 hover:bg-opacity-70 border-[#1d1e1f]">
+              <span className="mt-1 uppercase text-gray-300 text-xs p-2 bg-[#313131] sm:font-bold rounded border-b-4 border-r-4 hover:border-b-2 hover:border-r-2 hover:bg-opacity-70 border-[#1d1e1f]">
                 {data}
               </span>
             ))}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Amit_Thakur_Resume from "../../assets/Resume/Amit_Thakur_Resume.pdf";
 import { SingleTag } from "./SingleTag";
 import { motion } from "framer-motion";
 
