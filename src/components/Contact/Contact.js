@@ -69,7 +69,7 @@ const Contact = ({ color }) => {
         </div>
         <div className="w-full flex justify-center items-center text-5xl font-bold sm:pb-7 pb-3">
           <h1 className="text-[#ffffff] flex flex-row justify-center text-[3rem]">
-            <JumbleWord word={"Contact Me"} color={color} secondary={"white"} />
+            <JumbleWord word={"Contact-Me"} color={color} secondary={"white"} />
           </h1>
         </div>
         <div className="flex sm:flex-row flex-col space-y-5 sm:space-y-0 justify-center sm:space-x-4 mt-14">

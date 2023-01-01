@@ -223,7 +223,7 @@ const Project = ({ color }) => {
             duration: 0.5,
           }}
           viewport={{ once: true }}
-          className="flex flex-wrap space-x-3 justify-center md:px-20"
+          className="flex flex-wrap space-x-3 justify-center lg:px-20"
         >
           {techList.map((tech) => (
             <button

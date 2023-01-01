@@ -94,7 +94,7 @@ const About = ({ color }) => {
       <div className="w-full flex flex-col pt-8 snap-start" id="about">
         <div
           style={{ color: color }}
-          className="w-full flex justify-center items-center text-sm font-semibold mb-4"
+          className="w-full flex justify-center items-center text-sm font-semibold mb-4 tracking-[10px]"
         >
           GET TO KNOW
         </div>

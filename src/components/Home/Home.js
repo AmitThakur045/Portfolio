@@ -41,7 +41,7 @@ const Home = ({ color }) => {
   return (
     <>
       <div
-        className="flex md:flex-row flex-col md:space-x-3 snap-start"
+        className="flex lg:flex-row flex-col md:space-x-3 snap-start"
         id="home"
       >
         <motion.div
@@ -81,11 +81,14 @@ const Home = ({ color }) => {
             ></span>
           </p>
           <p className="text-[1rem] pt-5 text-gray-400 w-full">
-            I'm a MERN-Stack Web-Developer. Currently pursuing my Bachelor's in
-            Technology in Computer Science and Engineering from Maharaja
-            Surajmal Institute of Technology, New Delhi, India. Currently I'm
-            doing an internship as FullStack Developer at Bessalani. I also do
-            bit of Competitive programming.
+            I am a Computer Science student with a strong interest in
+            competitive coding and development. I have had the opportunity to
+            participate in several hackathons and coding challenges, including
+            winning India's largest run Hackathon, HACKCBS. In my work, I
+            specialize in using technologies like ReactJS, NextJS, NodeJS, and
+            MongoDB to build frontend and backend web applications. I am always
+            looking for new ways to challenge myself and improve my skills as a
+            developer.
           </p>
           <div className="pt-12 space-y-3">
             <h1 className="font-semibold w-full md:text-left text-center tracking-[10px] uppercase">
@@ -144,7 +147,7 @@ const Home = ({ color }) => {
             duration: 1.4,
           }}
           viewport={{ once: true }}
-          className="md:flex-[0.4] w-full flex flex-row pt-32 md:justify-end justify-center items-center"
+          className="md:flex-[0.4] w-full flex flex-row pt-32 lg:justify-end justify-center items-center"
         >
           <div
             className="flex justify-end bg-[#101118] bg-opacity-80 rounded-lg h-[22rem] items-end shadow-lg"

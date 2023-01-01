@@ -14,7 +14,7 @@ const Main = () => {
   return (
     <>
       <ColorPicker color={color} setColor={setColor} />
-      <div className="lg:px-24 md:px-12 px-4 py-10 w-full text-white snap-y snap-mandatory">
+      <div className="lg:px-24 md:px-12 px-4 py-10 w-full text-white snap-y snap-mandatory max-w-7xl">
         <Navbar color={color} />
         <Home color={color} />
         <Project color={color} />

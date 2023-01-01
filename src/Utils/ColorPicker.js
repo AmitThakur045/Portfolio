@@ -8,7 +8,7 @@ const ColorPicker = ({ color, setColor }) => {
 
   return (
     <div
-      className="fixed flex flex-row justify-end items-start z-20"
+      className="fixed flex flex-row justify-end items-start z-40"
       style={{ right: "0px", top: "0px" }}
     >
       {showPicker ? (
