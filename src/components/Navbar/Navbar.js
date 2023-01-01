@@ -21,6 +21,7 @@ const Navbar = ({ color }) => {
           transition={{
             duration: 1.2,
           }}
+          viewport={{ once: true }}
           className="col-span-2 w-full flex justify-start items-center text-4xl font-extrabold"
         >
           <span style={{ color: color }} className="">
@@ -39,6 +40,7 @@ const Navbar = ({ color }) => {
           transition={{
             duration: 2,
           }}
+          viewport={{ once: true }}
           className="col-span-2 flex w-full justify-center items-center space-x-6 text-gray-200 text-[1rem] font-semibold"
         >
           <SingleTag name={"HOME"} color={color} />
@@ -59,6 +61,7 @@ const Navbar = ({ color }) => {
           transition={{
             duration: 1.2,
           }}
+          viewport={{ once: true }}
           className="col-span-2 w-full flex justify-end items-center"
         >
           <a href={Amit_Thakur_Resume} download>

@@ -32,6 +32,7 @@ const JumbleWord = (props) => {
               }}
               style={{ color: props.secondary }}
               key={idx}
+              className="uppercase tracking-widest"
             >
               {letter}
             </motion.h1>

@@ -56,6 +56,7 @@ const Home = ({ color }) => {
           transition={{
             duration: 1.4,
           }}
+          viewport={{ once: true }}
           className="md:flex-[0.6] flex flex-col sm:pt-[5rem] w-full"
         >
           <h1 className="text-[1.4rem] font-semibold pb-0">
@@ -142,6 +143,7 @@ const Home = ({ color }) => {
           transition={{
             duration: 1.4,
           }}
+          viewport={{ once: true }}
           className="md:flex-[0.4] w-full flex flex-row pt-32 md:justify-end justify-center items-center"
         >
           <div
