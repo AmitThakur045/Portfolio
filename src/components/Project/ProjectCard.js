@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   const [isHover, setIsHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <motion.div
@@ -21,6 +23,7 @@ const ProjectCard = ({ project }) => {
       className="flex w-fit mx-auto"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      onClick={() => navigate(`/project/${project.name.toLowerCase()}`)}
     >
       <div className="sm:w-[25rem] w-[20rem] flex flex-col my-2">
         <div className="bg-[#dddddd] text-[#636363] rounded-tl-md rounded-tr-md w-full text-center font-bold p-1 z-20 tracking-[6px]">

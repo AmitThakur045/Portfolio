@@ -5,14 +5,14 @@ html {
 }
 body {
   background-color: #23282e;
-  background-image: repeating-linear-gradient(
+  /* background-image: repeating-linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0.1),
     rgba(255, 255, 255, 0.1) 1px,
     transparent 1px,
     transparent 6px
   );
-  background-size: 4px 4px;
+  background-size: 4px 4px; */
 }
 /* ::selection {
   background-color: #f30841;
