@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { data } from "./data";
 import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
 import { ImHome } from "react-icons/im";
+import { Helmet } from "react-helmet";
 
 const SingleProject = () => {
   const { slug } = useParams();
@@ -26,6 +27,16 @@ const SingleProject = () => {
 
   return (
     <div className="md:py-24 md:px-52 relative text-[#cacaca]">
+      <Helmet>
+        <title>
+          Project | {value.name} - {`${value.tech.map((curr) => curr)}`}
+        </title>
+        <meta name="description" content={value.smallDesc} />
+        <meta
+          name="keywords"
+          content={`Portfolio, ${value.name}, Amitthakur045, Beinglame, Amit Thakur`}
+        />
+      </Helmet>
       <div className="fixed w-fit h-fit p-2 md:left-14 md:top-10 left-4 top-4">
         <ImHome
           onClick={() => navigate("/")}
