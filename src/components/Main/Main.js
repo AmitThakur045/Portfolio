@@ -8,11 +8,13 @@ import About from "../About/About";
 import Downbar from "../Navbar/Downbar";
 import ColorPicker from "../../Utils/ColorPicker";
 import { ColorState } from "../../context/ColorProvider";
+import Transition from "../Transition/Transition";
 
 const Main = () => {
   const { color, setColor } = ColorState();
   return (
     <>
+      <Transition />
       <ColorPicker color={color} setColor={setColor} />
       <div className="lg:px-24 md:px-12 px-4 py-10 w-full text-white snap-y snap-mandatory xl:mx-auto">
         <Navbar color={color} />
