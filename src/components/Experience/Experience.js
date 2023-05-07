@@ -55,7 +55,7 @@ const Experience = ({ color }) => {
           </h1>
         </div>
         <div className="w-full mx-auto flex md:flex-row flex-col justify-center items-center">
-          <div className="w-full lg:w-[60%] flex lg:flex-row flex-col lg:space-x-5 space-y-10 lg:space-y-0 ">
+          <div className="w-full lg:w-[65%] flex lg:flex-row flex-col lg:space-x-5 space-y-10 lg:space-y-0 ">
             <div className="lg:flex-[0.2] flex flex-row lg:flex-col border-b-[1px] lg:border-l-[1px] lg:border-t-[1px] w-full border-[#e50b40] lg:h-[22rem]">
               {workData.work.map((work, idx) => (
                 <div
@@ -111,7 +111,7 @@ const Experience = ({ color }) => {
               </div>
             </div>
           </div>
-          <div className="w-full">
+          <div>
             <TagSphere />
           </div>
         </div>
