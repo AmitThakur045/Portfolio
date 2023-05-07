@@ -19,6 +19,8 @@
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "TagCloud": "^2.3.2",
+    "tailwind-scrollbar": "^3.0.0",
     "typed.js": "^2.0.12",
     "web-vitals": "^2.1.4"
   },

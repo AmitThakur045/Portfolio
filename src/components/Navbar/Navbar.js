@@ -44,7 +44,7 @@ const Navbar = ({ color }) => {
         >
           <SingleTag name={"HOME"} color={color} />
           <SingleTag name={"PROJECT"} color={color} />
-          <SingleTag name={"ABOUT"} color={color} />
+          <SingleTag name={"WORK"} color={color} />
           <SingleTag name={"CONTACT"} color={color} />
         </motion.div>
 
