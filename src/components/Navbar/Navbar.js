@@ -64,7 +64,7 @@ const Navbar = ({ color }) => {
           className="col-span-2 w-full flex justify-end items-center"
         >
           <a
-            href="https://drive.google.com/file/d/13EvGnn7tkWz6WKc-6qLz3z5YqPpCb0Ub/view"
+            href="https://drive.google.com/file/d/1XYW4QbBDWNbrpJ4021rylUSL-TmyDSZp/view"
             target="_blank"
             rel="noreferrer"
           >

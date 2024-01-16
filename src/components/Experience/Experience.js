@@ -6,6 +6,17 @@ import TagSphere from "../../Utils/TagSphere";
 const workData = {
   work: [
     {
+      title: "SDE Intern (Backend)",
+      company: "Blitz / Grow Simplee",
+      date: "Sept 2023 – Mar 2024",
+      description: [
+        "Spearheaded the implementation of an efficient asynchronous email notification system at Grow Simplee, enhancing client communication and streamlining processes.",
+        "Successfully refactored AWS Lambda code, incorporating rate limiting based on client query history, leading to significant improvements in system performance.",
+        "Introduced the Dimensional Weight System (DWS) to the existing system, simplifying the capturing and storage of physical dimensions for packages, enhancing overall logistics efficiency.",
+        "Authored a comprehensive Technical Requirements Document (TRD) for Regression Testing automation, providing the QA Team with a structured framework for improved testing efficiency.",
+      ],
+    },
+    {
       title: "Full-Stack Web Developer Intern",
       company: "WappStudio",
       date: "Jan 2023 – Mar 2023",

@@ -54,6 +54,14 @@ const Project = ({ color }) => {
       id: 13,
       name: "Socket",
     },
+    {
+      id: 14,
+      name: "Django"
+    },
+    {
+      id: 15,
+      name: "Spring Boot"
+    }
   ];
 
   const inActive = `ease-in my-3 flex justify-center items-start bg-[#101118] bg-opacity-80 p-4 px-6 rounded-md hover:scale-105 transition duration-200 hover:bg-white hover:text-black hover:cursor-pointer hover:font-bold uppercase`;
